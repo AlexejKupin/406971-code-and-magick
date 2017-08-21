@@ -1,10 +1,8 @@
-var canvas = document.getElementById('canvas-statistic');
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
-var names = ['Alex', 'MadMouse', 'RedHat', 'Keks'];
-var times = ['4222', '1500', '1000', '2000'];
-
+var max;
 function getMaxValue(times){
-  var max = times[0]; 
+  max = times[0]; 
     for (var i = 0; i < times.length; i++) { 
       if (max < times[i]) max = times[i]; 
     }
@@ -12,8 +10,9 @@ function getMaxValue(times){
 }
  
 
-function renderStatistics (ctx,names,times) {
+window.renderStatistics = function(ctx,names,times) {
 
+getMaxValue(times);
 ctx.rect(50, 5, 210,135);
 ctx.fillStyle = 'white';
 ctx.shadowColor ="rgba(0, 0, 0, 0.7)";
