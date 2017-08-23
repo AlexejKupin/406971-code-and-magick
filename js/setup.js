@@ -16,35 +16,8 @@ for (i = 0; i <= 4; i++) {
 var randName = WIZARD_NAMES[Math.floor(Math.random() * WIZARD_NAMES.length)] +' '+ WIZARD_SURNAMES[Math.floor(Math.random() * WIZARD_SURNAMES.length)];
 var randCoat = WIZARD_COATS[Math.floor(Math.random() * WIZARD_COATS.length)];
 var randEyes = WIZARD_EYES[Math.floor(Math.random() * WIZARD_EYES.length)];
-  wizards[i] = new GamePlayer(randName.toString(),randCoat.toString(),randEyes.toString());
+  wizards[i] = new GamePlayer(randName,randCoat,randEyes);
 };
-
-/*var wizards = [
-  {
-    name: WIZARD_NAMES[Math.floor(Math.random() * WIZARD_NAMES.length)] +' '+ WIZARD_SURNAMES[Math.floor(Math.random() * WIZARD_SURNAMES.length)],
-    coatColor: WIZARD_COATS[Math.floor(Math.random() * WIZARD_COATS.length)],
-    eyesColor : WIZARD_EYES[Math.floor(Math.random() * WIZARD_EYES.length)],
-  },
-  {
-    name: WIZARD_NAMES[Math.floor(Math.random() * WIZARD_NAMES.length)] +' '+ WIZARD_SURNAMES[Math.floor(Math.random() * WIZARD_SURNAMES.length)],
-    coatColor: WIZARD_COATS[Math.floor(Math.random() * WIZARD_COATS.length)],
-    eyesColor : WIZARD_EYES[Math.floor(Math.random() * WIZARD_EYES.length)],
-  },
-  {
-    name: WIZARD_NAMES[Math.floor(Math.random() * WIZARD_NAMES.length)] +' '+ WIZARD_SURNAMES[Math.floor(Math.random() * WIZARD_SURNAMES.length)],
-    coatColor: WIZARD_COATS[Math.floor(Math.random() * WIZARD_COATS.length)],
-    eyesColor : WIZARD_EYES[Math.floor(Math.random() * WIZARD_EYES.length)],
-  },
-
-  {
-    name: WIZARD_NAMES[Math.floor(Math.random() * WIZARD_NAMES.length)] +' '+ WIZARD_SURNAMES[Math.floor(Math.random() * WIZARD_SURNAMES.length)],
-    coatColor: WIZARD_COATS[Math.floor(Math.random() * WIZARD_COATS.length)],
-    eyesColor : WIZARD_EYES[Math.floor(Math.random() * WIZARD_EYES.length)],
-  },
-];*/
-
-
-
 
 var userDialog = document.querySelector('.setup');
 userDialog.classList.remove('hidden');
