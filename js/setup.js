@@ -11,6 +11,7 @@ function GamePlayer(n, c, e) {
 };
 
 var wizards = [];
+
 for (i = 0; i <= 4; i++) {
 var randName = WIZARD_NAMES[Math.floor(Math.random() * WIZARD_NAMES.length)] +' '+ WIZARD_SURNAMES[Math.floor(Math.random() * WIZARD_SURNAMES.length)];
 var randCoat = WIZARD_COATS[Math.floor(Math.random() * WIZARD_COATS.length)];
@@ -25,8 +26,10 @@ var similarListElement = userDialog.querySelector('.setup-similar-list');
 
 var similarWizardTemplate = document.querySelector('#similar-wizard-template').content;
 
+
 var renderWizard = function (wizard) {
   var wizardElement = similarWizardTemplate.cloneNode(true);
+  
   wizardElement.querySelector('.setup-similar-label').textContent = wizard.name;
   wizardElement.querySelector('.wizard-coat').style.fill = wizard.coatColor;
   
