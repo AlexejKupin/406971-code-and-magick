@@ -180,10 +180,10 @@
   var WIZARD_HEIGHT_RATIO = 1.337;
 
   var getFireballSpeed = function(left) {
-  return (left === true) ? 5 : 2;
+   return (left === true ? 5 : 2);
   };
 
-  var getWizardHeight = function () {
+  var getWizardHeight = function() {
     return wizardWidth * WIZARD_HEIGHT_RATIO;
   };
 
@@ -192,7 +192,7 @@
   };
 
   function getWizardY (height) { 
-    return height/3 - wizardWidth * WIZARD_HEIGHT_RATIO;
+    return height / 3 - wizardWidth * WIZARD_HEIGHT_RATIO;
   };
 
 </script>
