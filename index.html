@@ -75,9 +75,20 @@
     bottom: 0;
     left: 0;
     right: 0;"></canvas>
+  <canvas id="myCanvas" style="
+    width: 00px; 
+    height: 0px;    
+    padding: 0;
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;"></canvas>
 
 <div class="overlay setup hidden">
-  <form class="setup-wizard-form" method="post" enctype="multipart/form-data" autocomplete="off">
+  <form class="setup-wizard-form" method="post" enctype="multipart/form-data"  action="https://1510.dump.academy/code-and-magick" autocomplete="off">
     <div class="setup-title">
       <div class="setup-user">
         <div class="upload">
@@ -85,7 +96,9 @@
           <input type="file" name="avatar">
         </div>
         <label>
-          <input type="text" name="username" class="setup-user-name" value="Синий Пендальф"/>
+          <input type="text" name="username" 
+                 minlength="2" maxlength="25" required 
+                 class="setup-user-name" value="Синий Пендальф" />
         </label>
       </div>
 
