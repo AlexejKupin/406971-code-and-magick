@@ -179,19 +179,19 @@
   var wizardWidth = 70;
   var WIZARD_HEIGHT_RATIO = 1.337;
 
-  var getFireballSpeed = function(left) {
+  	(left) {
    return (left === true ? 5 : 2);
   };
 
-  var getWizardHeight = function() {
+  var getWizardHeight = function () {
     return wizardWidth * WIZARD_HEIGHT_RATIO;
   };
 
-  function getWizardX (width) { 
+  var getWizardX = function (width) { 
     return (width - wizardWidth) / 2;
   };
 
-  function getWizardY (height) { 
+  var getWizardY = function (height) { 
     return height / 3 - wizardWidth * WIZARD_HEIGHT_RATIO;
   };
 
