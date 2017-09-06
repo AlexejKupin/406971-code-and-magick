@@ -116,8 +116,8 @@ wizardEyes.addEventListener('click', function(){
 });
 
 
-var SetupFireballWrap = setup.querySelector('.setup-fireball-wrap');
+var setupFireballWrap = setup.querySelector('.setup-fireball-wrap');
 
-SetupFireballWrap.addEventListener('click', function(){
-  SetupFireballWrap.setAttribute('style', 'background:' + getRandFireballColor());
+setupFireballWrap.addEventListener('click', function(){
+  setupFireballWrap.setAttribute('style', 'background:' + getRandFireballColor());
 });
