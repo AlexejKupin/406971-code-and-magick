@@ -13,10 +13,9 @@ function getMaxValue(times){
 }
  
 
-var drawColum = function (ctx, number, height, revert) {
-ctx.fillStyle = 'rgba(255,0,0,1)';
-ctx.fillRect(140 + number * 90, revert, 40, height);
-
+var drawColum = function (ctx, number, height, revert, names) {
+ctx.fillRect(150 + number * 90, revert, 40, height);
+ctx.fillText(names, 150 + number * 90, 260);
 }
 
 window.renderStatistics = function(ctx,names,times) {
@@ -32,24 +31,29 @@ ctx.shadowOffsetX = 5;
 ctx.shadowOffsetY = 5;
 ctx.fillRect(100, 10, 420,270);
 
-for (var i = 0; i < 4; i++ ) {
-drawColum(ctx, i, 150/max*times[i], 240 - 150/max*times[i] ); 
-}; 
-
 ctx.shadowBlur = 0;
 ctx.shadowOffsetX = 0;
 ctx.shadowOffsetY = 0;
 ctx.font = '16px "PT Mono"';
-ctx.shadowColor ="white";
 ctx.textBaseline = 'hanging';
 ctx.fillStyle = 'black';
-ctx.fillText('Вы победили!', 100, 10);
-ctx.fillText('Список результатов!', 65, 20);
+ctx.fillText('Вы победили!', 250, 30);
+ctx.fillText('Список результатов!', 220, 45);
 
-ctx.font = '8px Arial';
+for (var i = 0; i < 4; i++ ) {
+drawColum(ctx, i, 150/max*times[i], 240 - 150/max*times[i], names[i]);
+var color;
+if (names[i] ==='Вы') { color = 'rgba(255,0,0,1)';
+ } else { color = 'rgba(0,0,255,'+ Math.random() + ')';
+};
+debugger
+ctx.fillStyle = color;
+}; 
 
 
-if (names[0] ==='Вы') {ctx.fillStyle = 'rgba(255,0,0,1)';
+
+
+/*if (names[0] ==='Вы') {ctx.fillStyle = 'rgba(255,0,0,1)';
   } else {ctx.fillStyle = 'rgba(0,0,255,'+ Math.random() +')';
     };
 ctx.fillRect(77, 120-75/max*times[0], 20, 75/max*times[0]);
@@ -75,6 +79,7 @@ if (names[3] ==='Вы') {ctx.fillStyle = 'rgba(255,0,0,1)';
     };
 ctx.fillRect(212, 120-75/max*times[3], 20,75/max*times[3]);
 ctx.fillStyle = 'black';
-ctx.fillText(names[3], 212, 125);
+ctx.fillText(names[3], 212, 125);*/
+
 };
 
