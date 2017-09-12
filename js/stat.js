@@ -1,7 +1,8 @@
 var getMaxValue = function(times) {
   var max = times[0];
   for (var i = 0; i < times.length; i++) {
-    if (max < times[i]) {max = times[i]
+    if (max < times[i]) {
+      max = times[i];
     };
   }
   return max;
@@ -9,7 +10,7 @@ var getMaxValue = function(times) {
 
  
 var drawColum = function (ctx, number, height, revert, names, times, namePosition) {
-var color = names === 'Вы' ? 'rgba(255,0,0,1)' : 'rgba(0,0,255,'+ Math.random() + ')';
+  var color = names === 'Вы' ? 'rgba(255,0,0,1)' : 'rgba(0,0,255,'+ Math.random() + ')';
 
   ctx.fillStyle = color;
   ctx.fillRect(150 + number * 90, revert, 40, height);
