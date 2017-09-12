@@ -43,4 +43,3 @@ window.renderStatistics = function(ctx,names,times) {
     drawColum(ctx, i, 150/max*times[i], 240 - 150/max*times[i], names[i], times[i], 215 - 150/max*times[i]);
   }; 
 };
-
